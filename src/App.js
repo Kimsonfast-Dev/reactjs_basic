@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './assets/logo/logo.svg';
+import './App.scss';
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo"/>
         <p>
-          Hllo world kimsonfast
+          Hello world kimsonfast
         </p>
         <a
           className="App-link"
