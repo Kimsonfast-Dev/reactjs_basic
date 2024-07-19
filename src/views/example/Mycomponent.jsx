@@ -1,11 +1,29 @@
 import React from 'react';
+import './Mycomponent.scss'
 
 class Mycomponent extends React.Component {
-    render(){
-        let a = 5;
 
+    state = {
+        name: "pandanlab",
+        channel: "Hoi dan IT"
+    }
+
+    handleOnChangeName = (event) =>{
+        this.setState({
+            name: event.target.value
+        })
+    }
+
+    render(){
+        // let a = "hello men1";
         return(
-            <h1>{a}</h1>
+            <>
+                <div>{this.state.name}</div>
+                <div>{this.state.channel}</div>
+                <input type="text" value={this.state.name}
+                onChange={(event)=>this.handleOnChangeName(event)}
+                />
+            </>
         )
     }
 }
