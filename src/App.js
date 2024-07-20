@@ -1,8 +1,9 @@
-import Mycomponent from './views/example/Mycomponent.jsx';
+import React from 'react';
+import Page1 from "./views/example2/page1.jsx";
 
 const App=()=>{
   return (
-    <Mycomponent/>
+      <Page1></Page1>
   );
 }
 

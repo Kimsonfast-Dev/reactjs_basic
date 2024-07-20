@@ -4,22 +4,26 @@ import './Mycomponent.scss'
 class Mycomponent extends React.Component {
 
     state = {
-        name: "pandanlab",
+        name: "",
         channel: "Hoi dan IT"
     }
 
     handleOnChangeName = (event) =>{
         this.setState({
+            name: event.target.value,
+            channel:"ac"
+        })
+    }
+
+    handleAlert = (event) =>{
+        this.setState({
             name: event.target.value
         })
     }
 
-    handleAlert = () =>{
-        alert("hello")
-    }
-
     render(){
         // let a = "hello men1";
+        console.log(this.state)
         return(
             <>
                 <div>{this.state.name}</div>
@@ -29,7 +33,7 @@ class Mycomponent extends React.Component {
                 />
 
                 <div>
-                    <button onClick={()=>{this.handleAlert()}}>oke</button>
+                    <button onClick={(event)=>{this.handleAlert(event)}} value="hello">oke</button>
                 </div>
             </>
         )
