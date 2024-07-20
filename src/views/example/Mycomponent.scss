@@ -1,19 +1,5 @@
-.class1 {
-    color: red;
-  }
-  
-  .class2 {
-    color: blue;
-  }
-  
-  .class3 {
-    color: green;
-  }
-  
-  .class4 {
-    color: orange;
-  }
-  
-  .class5 {
-    color: purple;
-  }
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

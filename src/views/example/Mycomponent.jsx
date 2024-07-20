@@ -4,37 +4,44 @@ import './Mycomponent.scss'
 class Mycomponent extends React.Component {
 
     state = {
-        name: "",
-        channel: "Hoi dan IT"
+        firstName: "",
+        lastName: ""
     }
 
-    handleOnChangeName = (event) =>{
+
+    handleOnChange_firstName = (event) =>{
         this.setState({
-            name: event.target.value,
-            channel:"ac"
+            firstName : event.target.value
         })
     }
 
-    handleAlert = (event) =>{
+    handleOnChange_lastName = (event) =>{
         this.setState({
-            name: event.target.value
+            lastName : event.target.value
         })
+    }
+
+    handleClick_submit = (event) =>{
+        event.preventDefault();
+        console.log(this.state)
     }
 
     render(){
-        // let a = "hello men1";
-        console.log(this.state)
         return(
             <>
-                <div>{this.state.name}</div>
-                <div>{this.state.channel}</div>
-                <input type="text" value={this.state.name}
-                onChange={(event)=>this.handleOnChangeName(event)}
-                />
+                <form>
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname"
+                    value={this.state.firstName}
+                    onChange={(event)=>{this.handleOnChange_firstName(event)}}/>
 
-                <div>
-                    <button onClick={(event)=>{this.handleAlert(event)}} value="hello">oke</button>
-                </div>
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname"
+                    value={this.state.lastNameName}
+                    onChange={(event)=>{this.handleOnChange_lastName(event)}}/>
+
+                    <button onClick={(event)=>{this.handleClick_submit(event)}}>submit</button>
+                </form>
             </>
         )
     }
