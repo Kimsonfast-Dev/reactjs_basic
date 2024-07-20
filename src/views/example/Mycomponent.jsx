@@ -14,6 +14,10 @@ class Mycomponent extends React.Component {
         })
     }
 
+    handleAlert = () =>{
+        alert("hello")
+    }
+
     render(){
         // let a = "hello men1";
         return(
@@ -23,6 +27,10 @@ class Mycomponent extends React.Component {
                 <input type="text" value={this.state.name}
                 onChange={(event)=>this.handleOnChangeName(event)}
                 />
+
+                <div>
+                    <button onClick={()=>{this.handleAlert()}}>oke</button>
+                </div>
             </>
         )
     }
