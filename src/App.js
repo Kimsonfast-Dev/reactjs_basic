@@ -1,24 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Page1 from "./views/example2/page1.jsx";
 
-function App() {
+const App=()=>{
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo"/>
-        <p>
-          Hllo world kimsonfast
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Page1></Page1>
   );
 }
 
